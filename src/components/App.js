@@ -40,7 +40,7 @@ const App = () => {
           <View />
         ) : (
           <View style={{ width: '100%', alignItems: 'center' }}>
-            <Text style={styles.text}>Enter Channel Name</Text>
+            <Text style={styles.text}> Channel Name</Text>
             <TextInput
               style={styles.input}
               onChangeText={(text) => setChannelName(text)}
@@ -49,23 +49,23 @@ const App = () => {
             />
           </View>
         )}
-        <View style={{flex: 1, justifyContent: 'flex-end'}}>
+        <View style={{ flex: 1, justifyContent: 'flex-end' }}>
           {joinSucceed ? (
-            <Icons name='phone-in-talk' size={90} color='#fff'/>
+            <Icons name="phone-in-talk" size={90} color="#fff" />
           ) : (
-            <Icons name='phone' size={90} color='#fff'/>
+            <Icons name="phone" size={90} color="#fff" />
           )}
         </View>
         <View style={styles.usersListContainer}>
           {Object.keys(peerIds).length == 0 ? (
-            <View style={{flex: 1, justifyContent: 'flex-start'}}>
+            <View style={{ flex: 1, justifyContent: 'flex-start' }}>
               <Text style={{ color: '#fff' }}>
                 You are not calling to anyone
               </Text>
             </View>
           ) : (
-            <View style={{justifyContent: 'center', alignItems: 'center'}}>
-              <Text style={{fontSize: 18, color: '#fff'}}>{`Calling ${
+            <View style={{ justifyContent: 'center', alignItems: 'center' }}>
+              <Text style={{ fontSize: 18, color: '#fff' }}>{`Calling ${
                 peerIds[Object.keys(peerIds).pop()]
               } `}</Text>
               <Stopwatch

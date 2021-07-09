@@ -5,6 +5,7 @@ export default StyleSheet.create({
     flex: 1,
   },
   input: {
+    textAlign: 'center',
     marginTop: '2%',
     borderColor: '#fff',
     borderWidth: 1,
